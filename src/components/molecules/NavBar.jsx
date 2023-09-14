@@ -1,6 +1,6 @@
 import Brand from '../atoms/Brand'
 import Message from '../atoms/Message'
-import ItemsListNavBar from '../atoms/ItemsListNavBar'
+import ItemsListNavBar from './ItemsListNavBar'
 const NavBar = () => {
   return (
     <>

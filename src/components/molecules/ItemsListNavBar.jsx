@@ -1,5 +1,5 @@
-import ItemNavBar from './ItemNavBar'
-import CartWidget from './CartWidget'
+import ItemNavBar from '../atoms/ItemNavBar'
+import CartWidget from '../atoms/CartWidget'
 
 const ItemsListNavBar = () => {
   return (
