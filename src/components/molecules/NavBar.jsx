@@ -1,22 +1,6 @@
 import Brand from '../atoms/Brand'
-import CartWidget from '../atoms/CartWidget'
 import Message from '../atoms/Message'
-
-const NAV_ITEMS = [
-  {
-    name: 'Mas vendidos',
-    href: '#',
-  },
-  {
-    name: 'Ofertas',
-    href: '#',
-  },
-  {
-    name: 'Contacto',
-    href: '#',
-  },
-]
-
+import ItemsListNavBar from '../atoms/ItemsListNavBar'
 const NavBar = () => {
   return (
     <>
@@ -64,20 +48,7 @@ const NavBar = () => {
             id="navbar-image-2"
             className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block"
           >
-            <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5">
-              {NAV_ITEMS.map((item, index) => (
-                <a
-                  key={index}
-                  // isActive = font-medium text-blue-500
-                  className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
-                  href={item.href}
-                  aria-current="page"
-                >
-                  {item.name}
-                </a>
-              ))}
-              <CartWidget quantity={10} />
-            </div>
+            <ItemsListNavBar />
           </div>
         </nav>
       </header>
