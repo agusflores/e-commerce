@@ -2,6 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-html { 
-    background-color: rgb(15 23 42);
+html {
+  background-color: rgb(15 23 42);
+}
+
+.active {
+  color: lightgreen !important;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  list-style-type: none;
+  padding: 20px;
+}
+
+.nav-item {
+  padding: 0 15px;
+  font-size: 1rem;
+  color: white;
+}
+
+.navbar li :hover {
+  color: lightgreen !important;
+}
+
+.message {
+  color: lightgreen !important;
+  font-weight: bold !important;
+}
+
+.cart-widget :hover {
+  color: lightgreen !important;
 }

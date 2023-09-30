@@ -1,7 +1,7 @@
 const CartWidget = ({ quantity }) => {
   return (
     <a
-      className="relative inline-flex flex-shrink-0 justify-center items-center h-[2rem] w-[2.5rem] rounded-md font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800 m-3"
+      className="cart-widget relative inline-flex flex-shrink-0 justify-center items-center h-[2rem] w-[2.5rem] rounded-md font-medium bg-white text-gray-700 shadow-sm align-middle  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900  dark:border-gray-700 dark:text-gray-400 dark:focus:ring-offset-gray-800 m-3"
       href="#"
     >
       <svg
@@ -10,7 +10,7 @@ const CartWidget = ({ quantity }) => {
         viewBox="0 0 24 24"
         strokeWidth="1.5"
         stroke="currentColor"
-        className="w-6 h-6"
+        className="text-white w-6 h-6"
       >
         <path
           strokeLinecap="round"

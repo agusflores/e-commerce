@@ -1,13 +1,14 @@
-const ItemNavBar = ({ name, href }) => {
+import { NavLink } from 'react-router-dom'
+
+const ItemNavBar = ({ route }) => {
   return (
-    <a
-      // isActive = font-medium text-blue-500
-      className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
-      href={href}
+    <NavLink
+      className={({ isActive }) => (isActive ? 'active nav-item' : 'nav-item')}
+      to={route.path}
       aria-current="page"
     >
-      {name}
-    </a>
+      {route.name}
+    </NavLink>
   )
 }
 

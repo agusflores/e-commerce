@@ -1,10 +1,8 @@
 import Brand from '../atoms/Brand'
-import Message from '../atoms/Message'
 import ItemsListNavBar from './ItemsListNavBar'
 const NavBar = () => {
   return (
     <>
-      <Message message="Explora nuestra variedad de electrodomésticos esenciales. Haz tu vida más fácil y cómoda hoy mismo." />
       <header className="flex flex-wrap sm:justify-start sm:flex-nowrap w-full z-50 text-sm py-4">
         <nav
           className="max-w-[100rem] w-3/5 mx-auto px-4 sm:flex sm:items-center sm:justify-between"
