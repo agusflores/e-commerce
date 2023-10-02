@@ -1,6 +1,6 @@
 const Brand = () => {
   return (
-    <a className="flex-none" href="/">
+    <a className="flex-none" href="/home">
       <img
         className="w-10 h-auto"
         src="src/assets/logo-aconcagua-hogar.png"
