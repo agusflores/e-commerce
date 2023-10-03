@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Message from './components/atoms/Message'
 import { NotFound } from './components/organisms/NotFound'
 import { Home } from './components/organisms/Home'
+import { Products } from './components/organisms/Products'
+import { ProductById } from './components/organisms/ProductById'
 
 function App() {
   return (
@@ -20,14 +22,19 @@ function App() {
               <NotFound
                 brand="Aconcagua Hogar"
                 numberError="404"
-                message="Oops, something went wrong."
-                secondMessage="Sorry, we couldn't find your page."
+                message="Oops, algo salio mal."
+                secondMessage="Disculpa, no pudimos encontrar tu pagina."
                 footer="© All Rights Reserved. 2022."
               />
             }
           ></Route>
           <Route exact path="/home" element={<Home />}></Route>
-          <Route exact path="/products" element={<h1>Products</h1>}></Route>
+          <Route exact path="/products" element={<Products />}></Route>
+          <Route
+            exact
+            path="/products/:idProduct"
+            element={<ProductById />}
+          ></Route>
           <Route exact path="/sales" element={<h1>Sales</h1>}></Route>
           <Route exact path="/contact" element={<h1>Contact</h1>}></Route>
           <Route exact path="/categories" element={<h1>Categories</h1>}></Route>
