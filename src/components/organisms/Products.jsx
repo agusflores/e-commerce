@@ -1,10 +1,15 @@
 import { Link } from 'react-router-dom'
 import { useProductList } from '../../hooks/useProductList'
+import { CircularProgress } from '@mui/material'
 export const Products = () => {
-  const { products } = useProductList()
+  const { products, loading } = useProductList()
 
-  if (!products) {
-    return <h1>Cargando...</h1>
+  if (loading) {
+    return (
+      <div className="w-screen h-60 flex items-center justify-center">
+        <CircularProgress />
+      </div>
+    )
   }
 
   console.log(products)

@@ -37,12 +37,6 @@ function App() {
           ></Route>
           <Route exact path="/sales" element={<h1>Sales</h1>}></Route>
           <Route exact path="/contact" element={<h1>Contact</h1>}></Route>
-          <Route exact path="/categories" element={<h1>Categories</h1>}></Route>
-          <Route
-            exact
-            path="/category/:categoryName"
-            element={<h1>Categoria</h1>}
-          ></Route>
         </Routes>
       </BrowserRouter>
     </>
