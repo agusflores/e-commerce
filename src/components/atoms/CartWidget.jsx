@@ -2,7 +2,7 @@ const CartWidget = ({ quantity }) => {
   return (
     <a
       className="cart-widget relative inline-flex flex-shrink-0 justify-center items-center h-[2rem] w-[2.5rem] rounded-md font-medium bg-white text-gray-700 shadow-sm align-middle  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900  dark:border-gray-700 dark:text-gray-400 dark:focus:ring-offset-gray-800 m-3"
-      href="#"
+      href="/cart"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

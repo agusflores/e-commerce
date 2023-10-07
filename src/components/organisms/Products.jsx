@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useProductList } from '../../hooks/useProductList'
 import { CircularProgress } from '@mui/material'
+import { ProductCard } from '../atoms/ProductCard'
 export const Products = () => {
   const { products, loading } = useProductList()
 
@@ -16,10 +17,12 @@ export const Products = () => {
 
   return (
     <>
-      <h1>Lista de Productos</h1>
+      <h1 className="text-3xl font-bold text-center">Lista de Productos</h1>
       {products.map((product) => (
         <li key={product.id}>
-          <Link to={`/products/${product.id}`}>{product.title}</Link>
+          <Link to={`/products/${product.id}`}>
+            <ProductCard product={product} />
+          </Link>
         </li>
       ))}
     </>
