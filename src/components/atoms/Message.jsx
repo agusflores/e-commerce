@@ -10,8 +10,9 @@ const Message = ({ message }) => {
             <p className="mr-2 inline-block text-sm text-gray-800 dark:text-gray-200">
               {message}
             </p>
+
             <span className=" message group-hover:underline decoration-2 inline-flex justify-center items-center gap-x-2 font-semibold text-blue-600 text-sm dark:text-blue-500 ">
-              Compra ahora
+              <a href="/cart">Compra ahora</a>
               <svg
                 className="w-2.5 h-2.5"
                 width="16"
