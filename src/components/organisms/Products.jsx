@@ -17,14 +17,18 @@ export const Products = () => {
 
   return (
     <>
-      <h1 className="text-3xl font-bold text-center">Lista de Productos</h1>
-      {products.map((product) => (
-        <li key={product.id}>
-          <Link to={`/products/${product.id}`}>
-            <ProductCard product={product} />
-          </Link>
-        </li>
-      ))}
+      <h1 className="text-3xl font-bold text-center text-white">
+        Lista de Productos
+      </h1>
+      <div>
+        {products.map((product) => (
+          <li key={product.id}>
+            <Link to={`/products/${product.id}`}>
+              <ProductCard product={product} />
+            </Link>
+          </li>
+        ))}
+      </div>
     </>
   )
 }
