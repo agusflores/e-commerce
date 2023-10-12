@@ -20,14 +20,16 @@ export const Products = () => {
       <h1 className="text-3xl font-bold text-center text-white">
         Lista de Productos
       </h1>
-      <div>
-        {products.map((product) => (
-          <li key={product.id}>
-            <Link to={`/products/${product.id}`}>
-              <ProductCard product={product} />
-            </Link>
-          </li>
-        ))}
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-6 h-6 items-center justify-center overflow-hidden">
+          {products.map((product) => (
+            <li className="list-none" key={product.id}>
+              <Link to={`/products/${product.id}`}>
+                <ProductCard product={product} />
+              </Link>
+            </li>
+          ))}
+        </div>
       </div>
     </>
   )

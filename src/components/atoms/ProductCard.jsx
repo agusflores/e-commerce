@@ -20,7 +20,7 @@ export const ProductCard = ({ product }) => {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {product.title}
+            {product.name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
             {product.description}

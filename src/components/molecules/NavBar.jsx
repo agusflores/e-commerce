@@ -1,5 +1,5 @@
 import Brand from '../atoms/Brand'
-import ItemsListNavBar from './ItemsListNavBar'
+import ItemsListNavBar from '../atoms/ItemsListNavBar'
 const NavBar = () => {
   return (
     <>

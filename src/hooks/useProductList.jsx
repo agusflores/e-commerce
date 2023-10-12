@@ -1,14 +1,17 @@
 import { useEffect, useState } from 'react'
-import { getAllProducts } from '../services/products_service'
+import { collection, getDocs, getFirestore } from 'firebase/firestore'
 
 export const useProductList = () => {
   const [products, setProducts] = useState([])
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
+
   useEffect(() => {
-    setLoading(true)
-    getAllProducts()
-      .then((data) => data.json())
-      .then((data) => setProducts(data))
+    const db = getFirestore()
+    const itemsCollection = collection(db, 'Products')
+    getDocs(itemsCollection)
+      .then((snapshot) => {
+        setProducts(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+      })
       .finally(() => setLoading(false))
   }, [])
 

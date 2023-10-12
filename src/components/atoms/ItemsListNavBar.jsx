@@ -1,8 +1,10 @@
-import ItemNavBar from '../atoms/ItemNavBar'
+import ItemNavBar from './ItemNavBar'
 import { NAVBAR_ROUTES } from '../../routes/routes'
-import CartWidget from '../atoms/CartWidget'
+import CartWidget from './CartWidget'
+import { useCartContext } from '../../context/CartProvider'
 
 const ItemsListNavBar = () => {
+  const CartContext = useCartContext()
   return (
     <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5">
       <ul className="navbar">
@@ -11,7 +13,7 @@ const ItemsListNavBar = () => {
             <ItemNavBar route={route}></ItemNavBar>
           </li>
         ))}
-        <CartWidget quantity={10} />
+        <CartWidget quantity={CartContext.quantity} />
       </ul>
     </div>
   )

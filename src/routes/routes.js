@@ -1,6 +1,6 @@
 export const NAVBAR_ROUTES = [
-  { path: '/home', name: 'Home' },
-  { path: '/products', name: 'Products' },
-  { path: '/sales', name: 'Sales' },
-  { path: '/contact', name: 'Contact' },
+  { path: '/home', name: 'Inicio' },
+  { path: '/products', name: 'Productos' },
+  { path: '/sales', name: 'Ofertas' },
+  { path: '/contact', name: 'Contacto' },
 ]
