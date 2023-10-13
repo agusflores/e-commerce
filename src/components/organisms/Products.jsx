@@ -21,7 +21,7 @@ export const Products = () => {
         Lista de Productos
       </h1>
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-6 h-6 items-center justify-center overflow-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-600 h-screen items-center justify-center overflow-hidden">
           {products.map((product) => (
             <li className="list-none" key={product.id}>
               <Link to={`/products/${product.id}`}>
