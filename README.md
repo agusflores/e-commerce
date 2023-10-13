@@ -18,6 +18,6 @@
 timeline
     title React Coderhouse
     Primera entrega 07/09/2023 : NavBar : Primeros Componentes
-    Segunda entrega 26/09/2023 : Otro : Otro : Otro
+    Segunda entrega 26/09/2023 : Routing : Navegacion 
     Entrega final 17/10/2023   : Proyecto Final terminado
 ```
