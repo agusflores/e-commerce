@@ -15,5 +15,9 @@ export const ProductById = () => {
     )
   }
 
-  return <ProductCard product={product} />
+  return (
+    <div className="flex items-center justify-center">
+      <ProductCard product={product} />
+    </div>
+  )
 }

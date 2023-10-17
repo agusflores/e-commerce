@@ -8,6 +8,7 @@ import { Home } from './components/organisms/Home'
 import { Products } from './components/organisms/Products'
 import { ProductById } from './components/organisms/ProductById'
 import { CartProvider } from './context/CartProvider'
+import { Cart } from './components/organisms/Cart'
 
 function App() {
   return (
@@ -37,9 +38,7 @@ function App() {
               path="/products/:idProduct"
               element={<ProductById />}
             ></Route>
-            <Route exact path="/sales" element={<h1>Sales</h1>}></Route>
-            <Route exact path="/contact" element={<h1>Contact</h1>}></Route>
-            <Route exact path="/cart" element={<h1>Cart</h1>}></Route>
+            <Route exact path="/cart" element={<Cart />}></Route>
           </Routes>
         </BrowserRouter>
       </CartProvider>
