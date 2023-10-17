@@ -7,11 +7,19 @@ import {
   CardMedia,
   Typography,
 } from '@mui/material'
-import { useCartContext } from '../../context/CartProvider'
+import { CartContext } from '../../context/CartProvider'
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
 
 export const ProductCard = ({ product }) => {
-  const { addToCart } = useCartContext()
+  const cartContext = useContext(CartContext)
+
+  console.log(cartContext)
+
+  const handleClick = () => {
+    cartContext.setCart([...cartContext.cart, product])
+    cartContext.setQuantity((prev) => prev + 1)
+  }
 
   return (
     <Card
@@ -49,7 +57,7 @@ export const ProductCard = ({ product }) => {
         </CardActionArea>
       </Link>
       <CardActions className="flex flex-col items-center">
-        <Button onClick={addToCart}>Agregar al carrito</Button>
+        <Button onClick={handleClick}>Agregar al carrito</Button>
       </CardActions>
     </Card>
   )
