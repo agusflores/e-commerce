@@ -56,8 +56,18 @@ export const ProductCard = ({ product }) => {
           </CardContent>
         </CardActionArea>
       </Link>
-      <CardActions className="flex flex-col items-center">
-        <Button onClick={handleClick}>Agregar al carrito</Button>
+      <CardActions className="flex flex-col items-center mb-5">
+        {product.stock === 0 ? (
+          <p className="text-red-500">Sin stock</p>
+        ) : (
+          <>
+            {cartContext.cart.find((item) => item.id === product.id) ? (
+              <p className="text-black-500">El producto se cargo al carrito</p>
+            ) : (
+              <Button onClick={handleClick}>Agregar al carrito</Button>
+            )}
+          </>
+        )}
       </CardActions>
     </Card>
   )
