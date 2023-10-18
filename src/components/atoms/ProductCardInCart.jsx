@@ -1,13 +1,19 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { CartContext } from '../../context/CartProvider'
 
 export const ProductCardInCart = () => {
   const cartContext = useContext(CartContext)
+  const [quantity, setQuantity] = useState(1)
 
-  const handleClick = () => {
-    cartContext.setCart(
-      cartContext.cart.filter((product) => product.id !== product.id)
-    )
+  const addQuantity = () => {
+    setQuantity(quantity + 1)
+  }
+  const removeQuantity = () => {
+    setQuantity(quantity - 1)
+  }
+
+  const handleClick = (id) => {
+    cartContext.setCart(cartContext.cart.filter((product) => product.id !== id))
     cartContext.setQuantity((prev) => prev - 1)
   }
 
@@ -31,27 +37,36 @@ export const ProductCardInCart = () => {
               <p className="mt-1 text-xs text-gray-700">
                 {product.description}
               </p>
+              <span className="mt-5 inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                Stock: {product.stock}
+              </span>
             </div>
             <div className="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
               <div className="flex items-center border-gray-100">
-                <span className="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50">
+                <span
+                  onClick={removeQuantity}
+                  className="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"
+                >
                   {' '}
                   -{' '}
                 </span>
                 <input
                   className="h-8 w-8 border bg-white text-center text-xs outline-none"
-                  type="number"
-                  value="1"
+                  type="text"
+                  value={quantity}
                   min="1"
                 />
-                <span className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50">
+                <span
+                  onClick={addQuantity}
+                  className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"
+                >
                   {' '}
                   +{' '}
                 </span>
               </div>
               <div className="flex items-center space-x-4">
-                <p className="text-sm">{product.price}</p>
-                <button onClick={handleClick}>
+                <p className="text-sm">${product.price}</p>
+                <button onClick={() => handleClick(product.id)}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"

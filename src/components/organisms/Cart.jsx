@@ -3,20 +3,17 @@ import { ProductCardInCart } from '../atoms/ProductCardInCart'
 import { CartContext } from '../../context/CartProvider'
 export const Cart = () => {
   const cartContext = useContext(CartContext)
-
-  console.log(cartContext)
-
   return (
     <>
       {cartContext.cart.length === 0 ? (
-        <div className="h-screen bg-gray-100 pt-20">
-          <h1 className="text-3xl font-bold text-center">
+        <div className="h-screen pt-20">
+          <h1 className="text-3xl font-bold text-center text-white">
             No hay productos seleccionados en el carrito
           </h1>
         </div>
       ) : (
-        <div className="h-screen bg-gray-100 pt-20">
-          <h1 className="mb-10 text-3xl font-bold text-center">
+        <div className="h-screen pt-20  overflow-y-auto">
+          <h1 className="mb-10 text-3xl font-bold text-center text-white">
             Productos seleccionados
           </h1>
           <div className="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
@@ -26,7 +23,7 @@ export const Cart = () => {
             <div className="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
               <div className="mb-2 flex justify-between">
                 <p className="text-gray-700">Subtotal</p>
-                <p className="text-gray-700">$129.99</p>
+                <p className="text-gray-700">$151231</p>
               </div>
               <div className="flex justify-between">
                 <p className="text-gray-700">Shipping</p>
@@ -41,7 +38,7 @@ export const Cart = () => {
                 </div>
               </div>
               <button className="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">
-                Check out
+                Comprar
               </button>
             </div>
           </div>
