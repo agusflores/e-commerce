@@ -17,6 +17,9 @@ export const ProductCard = ({ product }) => {
   const handleClick = () => {
     cartContext.setCart([...cartContext.cart, product])
     cartContext.setQuantity((prev) => prev + 1)
+    cartContext.setTotal(
+      parseFloat(cartContext.total) + parseFloat(product.price)
+    )
   }
 
   return (

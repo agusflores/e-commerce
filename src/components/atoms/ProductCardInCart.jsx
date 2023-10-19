@@ -8,11 +8,17 @@ export const ProductCardInCart = ({ product, initialQuantity }) => {
   const handleIncrement = () => {
     if (quantity < product.stock) {
       setQuantity(quantity + 1)
+      cartContext.setTotal(
+        parseFloat(cartContext.total) + parseFloat(product.price)
+      )
     }
   }
   const handleDecrement = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1)
+      cartContext.setTotal(
+        parseFloat(cartContext.total) - parseFloat(product.price)
+      )
     }
   }
 

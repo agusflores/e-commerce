@@ -5,7 +5,8 @@ export const CartContext = createContext()
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([])
   const [quantity, setQuantity] = useState(0)
-  
+  const [total, setTotal] = useState(0)
+
   return (
     <CartContext.Provider
       value={{
@@ -13,6 +14,8 @@ export function CartProvider({ children }) {
         setCart,
         quantity,
         setQuantity,
+        total,
+        setTotal,
       }}
     >
       {children}
