@@ -6,8 +6,6 @@ export function CartProvider({ children }) {
   const [cart, setCart] = useState([])
   const [quantity, setQuantity] = useState(0)
   
-  console.log(cart)
-
   return (
     <CartContext.Provider
       value={{

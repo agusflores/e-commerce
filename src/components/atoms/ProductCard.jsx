@@ -14,8 +14,6 @@ import { useContext } from 'react'
 export const ProductCard = ({ product }) => {
   const cartContext = useContext(CartContext)
 
-  console.log(cartContext)
-
   const handleClick = () => {
     cartContext.setCart([...cartContext.cart, product])
     cartContext.setQuantity((prev) => prev + 1)

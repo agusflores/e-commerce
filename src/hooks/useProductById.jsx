@@ -12,8 +12,6 @@ export const useProductById = (idProduct) => {
       .then((snapshot) => {
         if (snapshot.exists()) {
           setProduct({ ...snapshot.data(), id: snapshot.id })
-        } else {
-          console.log('No existe el documento')
         }
       })
       .finally(() => setLoading(false))
