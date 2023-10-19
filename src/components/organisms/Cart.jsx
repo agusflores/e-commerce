@@ -18,7 +18,13 @@ export const Cart = () => {
           </h1>
           <div className="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
             <div className="rounded-lg md:w-2/3">
-              <ProductCardInCart />
+              {cartContext.cart.map((product) => (
+                <ProductCardInCart
+                  key={product.id}
+                  product={product}
+                  initialQuantity={1}
+                />
+              ))}
             </div>
             <div className="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
               <div className="mb-2 flex justify-between">
