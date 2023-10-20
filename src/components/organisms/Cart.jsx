@@ -2,6 +2,7 @@ import { ProductCardInCart } from '../atoms/ProductCardInCart'
 import { CartContext } from '../../context/CartProvider'
 import { useContext, useState } from 'react'
 import { Alert } from '@mui/material'
+import { EmptyCart } from '../atoms/EmptyCart'
 export const Cart = () => {
   const cartContext = useContext(CartContext)
   const [openAlert, setOpenAlert] = useState(false)
@@ -21,11 +22,7 @@ export const Cart = () => {
   return (
     <>
       {cartContext.cart.length === 0 ? (
-        <div className="h-screen pt-20">
-          <h1 className="text-3xl font-bold text-center text-white">
-            No hay productos seleccionados en el carrito
-          </h1>
-        </div>
+        <EmptyCart />
       ) : (
         <div className="h-screen pt-20  overflow-y-auto">
           <h1 className="mb-10 text-3xl font-bold text-center text-white">
