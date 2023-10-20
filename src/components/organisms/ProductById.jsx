@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { useProductById } from '../../hooks/useProductById'
 import { CircularProgress } from '@mui/material'
-import { ProductCard } from '../atoms/ProductCard'
+import { ProductView } from '../atoms/ProductView'
 
 export const ProductById = () => {
   const { idProduct } = useParams()
@@ -17,7 +17,7 @@ export const ProductById = () => {
 
   return (
     <div className="flex items-center justify-center">
-      <ProductCard product={product} />
+      <ProductView product={product} />
     </div>
   )
 }

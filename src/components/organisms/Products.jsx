@@ -13,17 +13,12 @@ export const Products = () => {
   }
   return (
     <>
-      <h1 className="text-3xl font-bold text-center text-white">
-        Lista de Productos
-      </h1>
-      <div className="container mx-auto mt-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4  items-center justify-center">
-          {products.map((product) => (
-            <li className="list-none" key={product.id}>
-              <ProductCard product={product} />
-            </li>
-          ))}
-        </div>
+      <div className="flex justify-center align-center flex-wrap">
+        {products.map((product) => (
+          <li className="list-none" key={product.id}>
+            <ProductCard product={product} />
+          </li>
+        ))}
       </div>
     </>
   )
