@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export const Home = () => {
   return (
     <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,11 +16,12 @@ export const Home = () => {
           </p>
 
           <div className="mt-7 grid gap-3 w-full sm:inline-flex">
-            <a
+            <Link
+              to="/products"
+              aria-current="page"
               className="inline-flex justify-center items-center gap-x-3 text-center bg-blue-600 hover:bg-blue-700 border border-transparent text-sm lg:text-base text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4 dark:focus:ring-offset-gray-800"
-              href="/products"
             >
-              Ver productos
+              Ver productos{' '}
               <svg
                 className="w-2.5 h-2.5"
                 width="16"
@@ -33,7 +36,7 @@ export const Home = () => {
                   strokeLinecap="round"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
           <div className="mt-6 lg:mt-10 grid grid-cols-2 gap-x-5">
             <div className="py-5">
