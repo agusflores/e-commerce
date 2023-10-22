@@ -11,6 +11,7 @@ export const ProductCardInCart = ({ product, initialQuantity }) => {
       cartContext.setTotal(
         parseFloat(cartContext.total) + parseFloat(product.price)
       )
+      changeProductQuantity(true)
     }
   }
   const handleDecrement = () => {
@@ -19,7 +20,21 @@ export const ProductCardInCart = ({ product, initialQuantity }) => {
       cartContext.setTotal(
         parseFloat(cartContext.total) - parseFloat(product.price)
       )
+      changeProductQuantity(false)
     }
+  }
+
+  const changeProductQuantity = (isIncrement) => {
+    const product = cartContext.cart.find(
+      (product) => product.id === product.id
+    )
+    {
+      isIncrement
+        ? (product.quantity += quantity)
+        : (product.quantity -= quantity)
+    }
+
+    return { ...product, quantity: quantity }
   }
 
   const handleRemoveProduct = (id) => {

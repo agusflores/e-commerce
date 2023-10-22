@@ -4,6 +4,7 @@
 
 html {
   background-color: rgb(15 23 42);
+  font-family: 'Poppins';
 }
 
 .active {
@@ -48,4 +49,49 @@ html {
   background-color: whitesmoke;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.detail-purchase-container {
+  margin: 2rem;
+  padding: 10px;
+  height: 600px;
+  width: 90%;
+  background-color: whitesmoke;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.data-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-top: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  height: 80%;
+  width: 100%;
+  background-color: blue;
+}
+
+.form-container {
+  height: 100%;
+  width: 65%;
+  background-color: red;
+}
+
+.detail-container {
+  height: 100%;
+  width: 30%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: yellow;
+}
+
+.detail-product {
+  padding: 10px;
+}
+
+.detail-final-price {
+  padding: 10px;
 }

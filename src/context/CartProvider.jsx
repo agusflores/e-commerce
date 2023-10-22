@@ -6,6 +6,7 @@ export function CartProvider({ children }) {
   const [cart, setCart] = useState([])
   const [quantity, setQuantity] = useState(0)
   const [total, setTotal] = useState(0)
+  const [detailPurchaseCart, setDetailPurchaseCart] = useState([])
 
   return (
     <CartContext.Provider
@@ -16,6 +17,8 @@ export function CartProvider({ children }) {
         setQuantity,
         total,
         setTotal,
+        detailPurchaseCart,
+        setDetailPurchaseCart,
       }}
     >
       {children}

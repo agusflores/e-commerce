@@ -1,23 +1,11 @@
 import { ProductCardInCart } from '../atoms/ProductCardInCart'
 import { CartContext } from '../../context/CartProvider'
-import { useContext, useState } from 'react'
-import { Alert } from '@mui/material'
+import { useContext } from 'react'
 import { EmptyCart } from '../atoms/EmptyCart'
+import { Link } from 'react-router-dom'
 export const Cart = () => {
   const cartContext = useContext(CartContext)
-  const [openAlert, setOpenAlert] = useState(false)
   const SHIPPING = 4.99
-
-  const handleOpenAlert = () => {
-    setOpenAlert(true)
-  }
-
-  const handleCloseAlert = () => {
-    setOpenAlert(false)
-    cartContext.setCart([])
-    cartContext.setQuantity(0)
-    cartContext.setTotal(0)
-  }
 
   return (
     <>
@@ -56,20 +44,11 @@ export const Cart = () => {
                   </p>
                 </div>
               </div>
-              <button
-                onClick={handleOpenAlert}
-                className="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600"
-              >
-                Comprar
-              </button>
-              {openAlert ? (
-                <Alert
-                  className="fixed top-10 right-10 z-50"
-                  onClose={handleCloseAlert}
-                >
-                  Se ha realizado la compra de forma exitosa!
-                </Alert>
-              ) : null}
+              <Link to="/detail-purchase" aria-current="page">
+                <button className="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">
+                  Comprar
+                </button>
+              </Link>
             </div>
           </div>
         </div>

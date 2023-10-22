@@ -4,8 +4,12 @@ import { CartContext } from '../../context/CartProvider'
 export const ProductView = ({ product }) => {
   const cartContext = useContext(CartContext)
 
+  const addQuantityToProduct = () => {
+    return { ...product, quantity: 1 }
+  }
+
   const handleClick = () => {
-    cartContext.setCart([...cartContext.cart, product])
+    cartContext.setCart([...cartContext.cart, addQuantityToProduct(product)])
     cartContext.setQuantity((prev) => prev + 1)
     cartContext.setTotal(
       parseFloat(cartContext.total) + parseFloat(product.price)
@@ -39,7 +43,7 @@ export const ProductView = ({ product }) => {
                       ) : (
                         <button
                           onClick={handleClick}
-                          className="w-full bg-gray-900 dark:bg-gray-600 text-white py-2 px-4 rounded-full font-bold hover:bg-gray-800 dark:hover:bg-gray-700"
+                          className="w-full mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600"
                         >
                           Agregar al carrito
                         </button>

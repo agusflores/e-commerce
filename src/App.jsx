@@ -9,6 +9,7 @@ import { Products } from './components/organisms/Products'
 import { ProductById } from './components/organisms/ProductById'
 import { CartProvider } from './context/CartProvider'
 import { Cart } from './components/organisms/Cart'
+import { DetailPurchase } from './components/organisms/DetailPurchase'
 
 function App() {
   return (
@@ -39,6 +40,11 @@ function App() {
               element={<ProductById />}
             ></Route>
             <Route exact path="/cart" element={<Cart />}></Route>
+            <Route
+              exact
+              path="/detail-purchase"
+              element={<DetailPurchase />}
+            ></Route>
           </Routes>
         </BrowserRouter>
       </CartProvider>

@@ -5,8 +5,13 @@ import { useContext } from 'react'
 export const ProductCard = ({ product }) => {
   const cartContext = useContext(CartContext)
 
+  const addQuantityToProduct = () => {
+    return { ...product, quantity: 1 }
+  }
+
   const handleClick = () => {
-    cartContext.setCart([...cartContext.cart, product])
+    addQuantityToProduct(product)
+    cartContext.setCart([...cartContext.cart, addQuantityToProduct(product)])
     cartContext.setQuantity((prev) => prev + 1)
     cartContext.setTotal(
       parseFloat(cartContext.total) + parseFloat(product.price)
