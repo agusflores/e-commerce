@@ -55,7 +55,7 @@ export const ProductCard = ({ product }) => {
                   ) : (
                     <button
                       onClick={handleClick}
-                      className="bg-gray-900 text-white py-2 px-4 rounded-full font-bold hover:bg-gray-800"
+                      className="rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600 text-white py-2 px-4"
                     >
                       Agregar al carrito
                     </button>
@@ -67,54 +67,5 @@ export const ProductCard = ({ product }) => {
         </div>
       </div>
     </div>
-
-    // <Card
-    //   sx={{ maxWidth: 345 }}
-    //   classNameName="product-card flex flex-col justify-between align-center"
-    // >
-    //   <Link to={`/products/${product.id}`}>
-    //     <CardActionArea>
-    //       <CardMedia component="img" image={product.image} alt={product.name} />
-    //       <CardContent classNameName="h-50">
-    //         <Typography
-    //           gutterBottom
-    //           variant="h5"
-    //           component="div"
-    //           classNameName="text-center"
-    //         >
-    //           {product.name}
-    //         </Typography>
-    //         <Typography
-    //           variant="body2"
-    //           color="text.secondary"
-    //           classNameName="text-center"
-    //         >
-    //           {product.description}
-    //         </Typography>
-    //         <div classNameName="flex align-center gap-2 mt-5 justify-center">
-    //           <span classNameName="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-    //             Precio: ${product.price}
-    //           </span>
-    //           <span classNameName="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-    //             Stock: {product.stock} unidades
-    //           </span>
-    //         </div>
-    //       </CardContent>
-    //     </CardActionArea>
-    //   </Link>
-    //   <CardActions classNameName="flex flex-col items-center mb-5">
-    //     {product.stock === 0 ? (
-    //       <p classNameName="text-red-500">Sin stock</p>
-    //     ) : (
-    //       <>
-    //         {cartContext.cart.find((item) => item.id === product.id) ? (
-    //           <p classNameName="text-black-500">El producto se cargo al carrito</p>
-    //         ) : (
-    //           <Button onClick={handleClick}>Agregar al carrito</Button>
-    //         )}
-    //       </>
-    //     )}
-    //   </CardActions>
-    // </Card>
   )
 }
