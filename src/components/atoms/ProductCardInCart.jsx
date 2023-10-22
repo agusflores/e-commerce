@@ -1,13 +1,11 @@
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { CartContext } from '../../context/CartProvider'
 
-export const ProductCardInCart = ({ product, initialQuantity }) => {
+export const ProductCardInCart = ({ product }) => {
   const cartContext = useContext(CartContext)
-  const [quantity, setQuantity] = useState(initialQuantity)
 
   const handleIncrement = () => {
-    if (quantity < product.stock) {
-      setQuantity(quantity + 1)
+    if (product.quantity < product.stock) {
       cartContext.setTotal(
         parseFloat(cartContext.total) + parseFloat(product.price)
       )
@@ -15,8 +13,7 @@ export const ProductCardInCart = ({ product, initialQuantity }) => {
     }
   }
   const handleDecrement = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1)
+    if (product.quantity > 1) {
       cartContext.setTotal(
         parseFloat(cartContext.total) - parseFloat(product.price)
       )
@@ -29,12 +26,8 @@ export const ProductCardInCart = ({ product, initialQuantity }) => {
       (product) => product.id === product.id
     )
     {
-      isIncrement
-        ? (product.quantity += quantity)
-        : (product.quantity -= quantity)
+      isIncrement ? (product.quantity += 1) : (product.quantity -= 1)
     }
-
-    return { ...product, quantity: quantity }
   }
 
   const handleRemoveProduct = (id) => {
@@ -76,7 +69,7 @@ export const ProductCardInCart = ({ product, initialQuantity }) => {
               <input
                 className="h-8 w-8 border bg-white text-center text-xs outline-none"
                 type="text"
-                value={quantity}
+                value={product.quantity}
                 min="1"
               />
               <span
