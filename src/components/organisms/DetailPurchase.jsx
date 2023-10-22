@@ -19,54 +19,7 @@ export const DetailPurchase = () => {
             Completa tus datos y finaliza la compra.
           </p>
           <div className="data-container">
-            <div className="form-container">
-              <form>
-                <div className="mb-4">
-                  <label
-                    htmlFor="hs-hero-name-2"
-                    className="block text-sm font-medium dark:text-white"
-                  >
-                    <span className="sr-only">Full name</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="hs-hero-name-2"
-                    className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 sm:p-4 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
-                    placeholder="Full name"
-                  />
-                </div>
-
-                <div className="mb-4">
-                  <label
-                    htmlFor="hs-hero-email-2"
-                    className="block text-sm font-medium dark:text-white"
-                  >
-                    <span className="sr-only">Email address</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="hs-hero-email-2"
-                    className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 sm:p-4 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
-                    placeholder="Email address"
-                  />
-                </div>
-
-                <div className="mb-4">
-                  <label
-                    htmlFor="hs-hero-password-2"
-                    className="block text-sm font-medium dark:text-white"
-                  >
-                    <span className="sr-only">Password</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="hs-hero-password-2"
-                    className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 sm:p-4 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
-                    placeholder="Password"
-                  />
-                </div>
-              </form>
-            </div>
+            <div className="form-container"></div>
             <div className="detail-container">
               <h1 className="font-bold text-black-500 text-2xl m-2 text-white">
                 Detalle del pedido
@@ -99,6 +52,7 @@ export const DetailPurchase = () => {
                   ${cartContext.total + 4.99}
                 </p>
               </div>
+              <div className="h-full"></div>
               <button
                 type="submit"
                 className="mt-10 rounded-md bg-blue-500 py-2 px-2 font-medium text-blue-50 hover:bg-blue-600"
