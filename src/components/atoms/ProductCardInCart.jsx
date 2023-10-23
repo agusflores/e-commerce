@@ -22,9 +22,6 @@ export const ProductCardInCart = ({ product }) => {
   }
 
   const changeProductQuantity = (isIncrement) => {
-    const product = cartContext.cart.find(
-      (product) => product.id === product.id
-    )
     {
       isIncrement ? (product.quantity += 1) : (product.quantity -= 1)
     }
