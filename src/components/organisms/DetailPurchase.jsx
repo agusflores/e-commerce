@@ -4,10 +4,11 @@ import { CartContext } from '../../context/CartProvider'
 export const DetailPurchase = () => {
   const cartContext = useContext(CartContext)
 
-  console.log(cartContext)
-
-  console.log(cartContext.cart)
-
+  const handleFinishPurchase = () => {
+    cartContext.setCart([])
+    cartContext.setQuantity(0)
+    cartContext.setTotal(0)
+  }
   return (
     <>
       <div className="flex justify-center items-center">
@@ -54,6 +55,7 @@ export const DetailPurchase = () => {
               </div>
               <div className="h-full"></div>
               <button
+                onClick={handleFinishPurchase}
                 type="submit"
                 className="mt-10 rounded-md bg-blue-500 py-2 px-2 font-medium text-blue-50 hover:bg-blue-600"
               >

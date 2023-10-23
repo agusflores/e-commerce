@@ -3,7 +3,7 @@ import { CartContext } from '../../context/CartProvider'
 
 export const ProductView = ({ product }) => {
   const cartContext = useContext(CartContext)
-
+  
   const addQuantityToProduct = () => {
     return { ...product, quantity: 1 }
   }
