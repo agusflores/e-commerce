@@ -1,6 +1,7 @@
 import { TextField } from '@mui/material'
 import { useContext } from 'react'
 import { CartContext } from '../../context/CartProvider'
+import { Link } from 'react-router-dom'
 
 export const FormDetailPurchase = () => {
   const cartContext = useContext(CartContext)
@@ -34,13 +35,15 @@ export const FormDetailPurchase = () => {
           label="Direccion"
           variant="outlined"
         />
-        <button
-          onClick={handleFinishPurchase}
-          type="submit"
-          className="w-2/6 mt-10 rounded-md bg-blue-500 py-2 px-2 font-medium text-blue-50 hover:bg-blue-600"
-        >
-          Confirmar compra
-        </button>
+        <Link to="/home" aria-current="page">
+          <button
+            onClick={handleFinishPurchase}
+            type="submit"
+            className="w-2/6 mt-10 rounded-md bg-blue-500 py-2 px-2 font-medium text-blue-50 hover:bg-blue-600"
+          >
+            Confirmar compra
+          </button>
+        </Link>
       </form>
     </>
   )
