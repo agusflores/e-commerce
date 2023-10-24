@@ -49,8 +49,8 @@ export const ProductCard = ({ product }) => {
               ) : (
                 <>
                   {cartContext.cart.find((item) => item.id === product.id) ? (
-                    <p className="text-black-500">
-                      El producto se cargo al carrito
+                    <p className="text-black-500 text-center font-medium font-bold">
+                      Producto agregado
                     </p>
                   ) : (
                     <button

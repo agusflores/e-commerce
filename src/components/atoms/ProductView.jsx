@@ -37,8 +37,8 @@ export const ProductView = ({ product }) => {
                       {cartContext.cart.find(
                         (item) => item.id === product.id
                       ) ? (
-                        <p className=" font-bold text-white text-center">
-                          El producto se cargo al carrito
+                        <p className=" font-bold text-white text-center font-medium">
+                          Producto agregado
                         </p>
                       ) : (
                         <button
