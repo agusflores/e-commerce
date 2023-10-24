@@ -31,7 +31,8 @@ export const ProductCardInCart = ({ product }) => {
     cartContext.setCart(cartContext.cart.filter((product) => product.id !== id))
     cartContext.setQuantity((prev) => prev - 1)
     cartContext.setTotal(
-      parseFloat(cartContext.total) - parseFloat(product.price)
+      parseFloat(cartContext.total) -
+        parseFloat(product.price) * product.quantity
     )
   }
 
