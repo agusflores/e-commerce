@@ -13,42 +13,45 @@ export const DetailPurchase = () => {
               <FormDetailPurchase />
             </div>
             <div className="detail-container">
-              <h1 className="font-bold text-black-500 text-2xl m-2 text-black-500">
-                Detalle del pedido
-              </h1>
               <div>
-                <p className="font-bold text-black-500 text-xl mt-5 ml-2 text-black-500">
-                  Productos
-                </p>
-              </div>
-              {cartContext.cart.map((product) => (
-                <div className="detail-product" key={product.id}>
-                  <p className="text-black-500">
-                    {product.quantity} x {product.name} - ${product.price} c/u
+                <h1 className="font-bold text-black-500 text-2xl m-2 text-black-500">
+                  Detalle del pedido
+                </h1>
+                <div>
+                  <p className="font-bold text-black-500 text-xl mt-5 ml-2 text-black-500">
+                    Productos
                   </p>
                 </div>
-              ))}
-              <div className="flex justify-between">
-                <p className="font-bold text-xl ml-2 text-black-500">
-                  Subtotal
-                </p>
-                <p className="detail-final-price font-bold text-black-500">
-                  ${cartContext.total}
-                </p>
+                {cartContext.cart.map((product) => (
+                  <div className="detail-product" key={product.id}>
+                    <p className="text-black-500">
+                      {product.quantity} x {product.name} - ${product.price} c/u
+                    </p>
+                  </div>
+                ))}
               </div>
-              <div className="flex justify-between">
-                <p className="font-bold text-black-500 text-xl ml-2">Envio</p>
-                <p className="detail-final-price font-bold text-black-500">
-                  $4.99
-                </p>
+              <div>
+                <div className="flex justify-between">
+                  <p className="font-bold text-xl ml-2 text-black-500">
+                    Subtotal
+                  </p>
+                  <p className="detail-final-price font-bold text-black-500">
+                    ${cartContext.total}
+                  </p>
+                </div>
+                <div className="flex justify-between">
+                  <p className="font-bold text-black-500 text-xl ml-2">Envio</p>
+                  <p className="detail-final-price font-bold text-black-500">
+                    $4.99
+                  </p>
+                </div>
+                <div className="flex justify-between">
+                  <p className="font-bold text-black-500 text-xl ml-2">Total</p>
+                  <p className="detail-final-price font-bold text-black-500">
+                    ${cartContext.total + 4.99}
+                  </p>
+                </div>
               </div>
-              <div className="flex justify-between">
-                <p className="font-bold text-black-500 text-xl ml-2">Total</p>
-                <p className="detail-final-price font-bold text-black-500">
-                  ${cartContext.total + 4.99}
-                </p>
-              </div>
-              <div className="h-full"></div>
             </div>
           </div>
         </div>
