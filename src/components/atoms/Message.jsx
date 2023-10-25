@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Message = ({ message }) => {
   return (
     <>
@@ -12,7 +14,7 @@ const Message = ({ message }) => {
             </p>
 
             <span className=" message group-hover:underline decoration-2 inline-flex justify-center items-center gap-x-2 font-semibold text-blue-600 text-sm dark:text-blue-500 ">
-              <a href="/products">Compra ahora</a>
+              <Link to="/products">Compra ahora</Link>
               <svg
                 className="w-2.5 h-2.5"
                 width="16"
