@@ -5,7 +5,7 @@ export const EmptyCart = () => {
     <div className="flex justify-center item-center">
       <div className="empty-cart-container">
         <div className="w-full h-2/3 flex justify-center">
-          <img src={"/static/images/empty-cart.png"} alt="" />
+          <img src={'/static/images/empty-cart.png'} alt="" />
         </div>
         <h1 className="text-center mt-5 text-blue-600 text-3xl font-bold">
           El carrito esta vacio
