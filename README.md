@@ -3,7 +3,7 @@
 ### 👉 Content
 > E-commerce en base a una tienda de electrodomesticos con nombre 'Aconcagua Hogar'.
 > 
-> El sitio web tiene enrutado a las paginas de 'Home', 'Productos', 'Producto por ID', 'Carrito'.
+> El sitio web tiene enrutado a las paginas de 'Home', 'Productos', 'Producto por ID', 'Carrito' y Detalle de Compra.
 >
 > Se utilizo Firebase y Firestore donde se cargaron los productos que se utilizan. Y tambien se utilizaron algunos componentes de material UI.
 
